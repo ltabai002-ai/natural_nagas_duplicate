@@ -10,9 +10,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-green-700 rounded-lg flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="https://page.gensparksite.com/v1/base64_upload/a63515f570a86d334364d817050630fe"
+                alt="Natural Nagas Conservation Initiative Logo"
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white">Natural Nagas</span>
                 <span className="text-xs text-emerald-400 font-medium">Conservation Initiative</span>
