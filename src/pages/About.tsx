@@ -6,38 +6,38 @@ const About = () => {
   const milestones = [
     {
       year: '2012',
-      title: 'Foundation & First Encounter',
-      description: 'Natural Nagas was born from a transformative encounter with raptors and the urgent need to address the Amur Falcon crisis in Nagaland.',
+      title: 'Foundation & Amur Falcon Crisis Response',
+      description: 'Natural Nagas was founded (Reg. No. HOME/SRC-6390 dated 07-08-2012) in response to the Amur Falcon massacre in Nagaland, inspired by wildlife photography at Kaziranga National Park in 2011.',
       icon: Target
     },
     {
-      year: '2015',
-      title: 'Community Partnerships',
-      description: 'Established strong partnerships with local communities, building trust and collaborative conservation approaches.',
-      icon: Users
-    },
-    {
-      year: '2018',
-      title: 'Education Programs Launch',
-      description: 'Launched comprehensive education initiatives reaching 40+ schools across Nagaland.',
+      year: '2013',
+      title: 'Historic MoU & Conservation Success',
+      description: 'Signed tripartite MOU with Wildlife Trust of India and village councils of Pangti, Sungro, and Ashaa. Achieved zero killing of Amur Falcons from 100,000+ killed in 2012.',
       icon: Award
     },
     {
-      year: '2020',
-      title: 'Research & Documentation',
-      description: 'Began systematic research and documentation of local biodiversity and conservation impacts.',
+      year: '2015',
+      title: 'Green Dream Project Launch',
+      description: 'Launched Green Village New Riphyim initiative with the motto "Of the community, by the community and for the community" as a model sustainable village.',
+      icon: Trees
+    },
+    {
+      year: '2018',
+      title: 'First Amur Falcon Festival',
+      description: 'Organized the first-ever Amur Falcon Conservation Festival (Nov 8-10, 2018) at Doyang reservoir, promoting eco-tourism and conservation awareness.',
       icon: Calendar
     },
     {
-      year: '2023',
-      title: 'International Recognition',
-      description: 'Gained international recognition for community-led conservation efforts and sustainable practices.',
-      icon: Heart
+      year: '2021',
+      title: 'Major Project Partnerships',
+      description: 'Began partnerships with JICA NFMP Project and World Bank ELEMENT Project for large-scale ecosystem management and forest conservation.',
+      icon: Users
     },
     {
       year: '2025',
-      title: 'Expanding Impact',
-      description: 'Continuing to expand conservation programs and community engagement across Northeast India.',
+      title: '13+ Years of Conservation Impact',
+      description: 'Continuing to expand conservation programs across 40+ villages in Wokha district and beyond, with focus on community-based conservation.',
       icon: MapPin
     }
   ];
@@ -46,7 +46,7 @@ const About = () => {
     {
       name: 'Steve Odyuo',
       role: 'Founder & Chairman',
-      bio: 'A passionate conservationist and community leader, Steve founded Natural Nagas after witnessing the critical need for wildlife protection in Nagaland. His vision combines traditional Naga values with modern conservation science.',
+      bio: 'Graduate, social activist and entrepreneur with a deep passion for wildlife and travel photography. Steve founded Natural Nagas in 2012 after a transformative wildlife photography experience at Kaziranga National Park in 2011. Member of State Wildlife Advisory Board Nagaland and Member Standing Committee on Environment, BAN. His work spans Amur Falcon conservation, Human-Elephant Conflict mitigation, and the rediscovery of the Black Soft Shell Turtle.',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg'
     }
   ];
@@ -107,22 +107,21 @@ const About = () => {
               
               <div className="prose prose-lg text-gray-700">
                 <p>
-                  In 2012, a transformative encounter with raptors sparked what would become Natural Nagas 
-                  Conservation Initiative. Witnessing the Amur Falcon crisis in Nagaland - where thousands 
-                  of these magnificent birds were being hunted during their epic migration from Siberia to Africa - 
-                  founder Steve Odyuo knew immediate action was needed.
+                  Natural Nagas was officially registered (HOME/SRC-6390) on August 7, 2012, in Wokha, Nagaland, 
+                  born from founder Steve Odyuo's transformative wildlife photography experience at Kaziranga National Park in 2011. 
+                  A shot of a serpent eagle flying off with a snake ignited his passion for wildlife photography and conservation.
                 </p>
                 <p>
-                  What started as an urgent response to protect a single species evolved into a comprehensive 
-                  conservation movement. We realized that true conservation success could only come through 
-                  empowering local communities, combining traditional Naga wisdom with modern conservation science, 
-                  and creating sustainable solutions that benefit both wildlife and people.
+                  The organization emerged in response to the exposé on the massacre of Amur Falcons in Nagaland, 
+                  which went viral globally. Natural Nagas, along with the Wildlife Trust of India, spearheaded 
+                  the Amur Falcon Conservation project, achieving remarkable success - from over 100,000 birds 
+                  killed in 2012 to zero killing in Pangti village by 2013.
                 </p>
                 <p>
-                  Today, after 13+ years of dedicated work, Natural Nagas stands as a testament to what 
-                  community-led conservation can achieve. From protecting the Amur Falcon to restoring 
-                  ecosystems, from educating youth to building sustainable livelihoods - our journey 
-                  continues with the same passion that sparked it all.
+                  The name "Natural Nagas" stems from the tribal Nagas who are basically natural biologists, 
+                  knowing their land, flora and fauna through practical exposure and ancestral practices. 
+                  Today, with 13+ years of conservation work, we continue Steve's vision to create a generation 
+                  of responsible citizens who can safeguard and take care of our environment in a sustainable way.
                 </p>
               </div>
             </div>

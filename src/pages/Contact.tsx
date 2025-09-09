@@ -18,9 +18,9 @@ const Contact = () => {
       icon: MapPin,
       title: 'Address',
       details: [
-        'Natural Nagas Conservation Initiative',
-        'Wokha, Nagaland 797111',
-        'India'
+        'Natural Nagas Conservation Organization',
+        'Reg. No. HOME/SRC-6390 dated 07-08-2012',
+        'Wokha, Nagaland 797111, India'
       ]
     },
     {

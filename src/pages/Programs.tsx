@@ -7,58 +7,58 @@ const Programs = () => {
     {
       id: 'amur-falcon',
       title: 'Amur Falcon Conservation',
-      subtitle: 'Protecting the World\'s Longest Migrating Raptor',
-      description: 'Our flagship program protects the Amur Falcon during its critical stopover in Nagaland. Through community engagement, education, and alternative livelihood programs, we\'ve transformed hunting grounds into conservation sanctuaries.',
+      subtitle: 'From 100,000+ Killed to Zero - Nagaland as Falcon Capital of World',
+      description: 'Our flagship program transformed Nagaland from a massacre site to a safe haven for Amur Falcons. Partnering with WTI, we signed historic MoUs with Pangti, Sungro, and Ashaa villages. The program includes Bird-for-Bird initiatives, Grain-for-Grain compensation, patrolling squads, and the annual Amur Falcon Festival.',
       image: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg',
-      impact: ['10,000+ Falcons Protected Annually', '15 Villages Engaged', '85% Reduction in Hunting'],
+      impact: ['Zero Killing Achieved in 2013', 'Doyang Reservoir - Global Roosting Site', 'Villages: Pangti, Sungro, Ashaa'],
       status: 'Active Since 2012',
       icon: Bird
     },
     {
       id: 'green-dream',
-      title: 'Green Dream Project',
-      subtitle: 'Transforming New Riphyim Village',
-      description: 'A comprehensive community development initiative in New Riphyim village focusing on sustainable agriculture, forest restoration, and alternative livelihoods that benefit both people and nature.',
+      title: 'Green Dream Project (GDP)',
+      subtitle: 'Model Green Village New Riphyim Initiative',
+      description: 'Green Village New Riphyim with the motto "Of the community, by the community and for the community" was adopted as a model village for disseminating awareness and education about sustainable development and biodiversity conservation. Launched on World Environment Day 2015.',
       image: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg',
-      impact: ['500+ Trees Planted', '50 Families Benefited', '200 Hectares Restored'],
-      status: 'Ongoing',
+      impact: ['Model Village Program', 'Water Table Recharge Projects', 'Sustainable Development Focus'],
+      status: 'Ongoing Since 2015',
       icon: Trees
     },
     {
       id: 'jica-nfmp',
-      title: 'JICA NFMP Initiative',
-      subtitle: 'Nagaland Forest Management Project',
-      description: 'Partnering with JICA to implement sustainable forest management practices across Nagaland, focusing on biodiversity conservation and community forest rights.',
+      title: 'JICA NFMP Project',
+      subtitle: 'Natural Forest Management Project Partnership',
+      description: 'As an organization familiar with the local landscape in Wokha district, Natural Nagas provides experts, logistics and data for this Japan-funded forest management project. We monitor, train and handhold community representatives across 24 villages in 4 batches.',
       image: 'https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg',
-      impact: ['5,000 Hectares Under Management', '20 Community Forest Committees', '30% Increase in Forest Cover'],
-      status: 'Phase II Active',
+      impact: ['24 Villages Across 4 Batches', 'Wokha District Focus', 'Community Training & Monitoring'],
+      status: 'Active Partnership',
       icon: Trees
     },
     {
       id: 'element',
-      title: 'ELEMENT Program',
-      subtitle: 'World Bank Collaboration',
-      description: 'The Environmental and Social Management Framework under the World Bank\'s ELEMENT program, focusing on landscape-level conservation and sustainable development.',
+      title: 'ELEMENT World Bank Project',
+      subtitle: 'Enhancing Landscape and Ecosystem Management ($225.5M)',
+      description: 'Natural Nagas has officially signed a contract with the Government of Nagaland as part of the ELEMENT Project. We provide expertise, logistics, data, and community training across two Protected Forest Areas (PFAs) in Wokha district covering 23 villages.',
       image: 'https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg',
-      impact: ['10 Districts Covered', '$2M+ Investment', '100+ Conservation Activities'],
-      status: 'Multi-year Initiative',
+      impact: ['PFA 1: 10 Villages', 'PFA 2: 13 Villages', 'Wokha District Coverage'],
+      status: 'Active Contract',
       icon: Award
     }
   ];
 
   const wildlifeProjects = [
     {
-      title: 'Black Soft-shell Turtle Rescue',
-      description: 'Emergency conservation efforts for the critically endangered Black Soft-shell Turtle found in Nagaland\'s wetlands.',
+      title: 'Black Soft-shell Turtle Conservation',
+      description: 'Rediscovery and conservation of the Black Soft-Shell Turtle (listed as Extinct in Wild in 2002 by IUCN) at Wozhu Tsophow wetlands, Old Akuk village, Wokha District. This species was thought to be extinct until our discovery.',
       image: 'https://images.pexels.com/photos/1618606/pexels-photo-1618606.jpeg',
-      impact: '50+ Turtles Rescued',
+      impact: 'Species Back from Extinction',
       icon: MapPin
     },
     {
       title: 'Human-Elephant Conflict Mitigation',
-      description: 'Developing innovative solutions to reduce conflicts between Asian elephants and farming communities.',
+      description: 'Addressing human-animal conflict in Wokha District through Rapid Action Programme (RAP) with WTI. Providing relief to affected households in Pangti, Sungro, and Ashaa areas where elephants cause crop damage and livelihood losses.',
       image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg',
-      impact: '85% Conflict Reduction',
+      impact: 'RAP Program with WTI',
       icon: Elephant
     }
   ];

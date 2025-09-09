@@ -13,24 +13,24 @@ const Home = () => {
   const featuredPrograms = [
     {
       title: 'Amur Falcon Conservation',
-      description: 'Protecting one of the world\'s longest migrating raptors through community-led conservation efforts.',
+      description: 'Our flagship program that made Nagaland the "Falcon Capital of the World" - protecting these raptors on their 22,000 km migration from Siberia to Africa via Doyang reservoir.',
       image: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg',
       link: '/programs#amur-falcon',
-      stats: '10,000+ Falcons Protected'
+      stats: 'From 100,000+ Killed to Zero in 2013'
     },
     {
       title: 'Green Dream Project',
-      description: 'Transforming New Riphyim village through sustainable development and environmental restoration.',
+      description: 'Model village initiative in New Riphyim with the motto "Of the community, by the community and for the community" - sustainable development and biodiversity conservation.',
       image: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg',
       link: '/programs#green-dream',
-      stats: '500+ Trees Planted'
+      stats: 'Model Village Program'
     },
     {
-      title: 'Human-Elephant Conflict Mitigation',
-      description: 'Building harmonious coexistence between communities and Asian elephants through innovative solutions.',
+      title: 'Black Soft-Shell Turtle Conservation',
+      description: 'Rediscovery and conservation of the Black Soft-Shell Turtle (listed as Extinct in Wild in 2002) at Wozhu Tsophow wetlands, Old Akuk village.',
       image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg',
-      link: '/programs#elephant-conflict',
-      stats: '85% Conflict Reduction'
+      link: '/programs#turtle-conservation',
+      stats: 'Species Back from Extinction'
     }
   ];
 
@@ -43,20 +43,20 @@ const Home = () => {
 
   const blogPosts = [
     {
-      title: 'The Return of the Amur Falcons: A Conservation Success Story',
-      excerpt: 'After years of dedicated conservation efforts, we celebrate the increasing numbers of Amur Falcons...',
-      date: '2025-01-15',
+      title: 'World Environment Day 2025: Ending Plastic Pollution at Longphijü',
+      excerpt: 'Natural Nagas team carried out meaningful awareness and action campaign at Longphijü wetlands in Wokha district...',
+      date: '2025-06-05',
       image: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg'
     },
     {
-      title: 'Community-Led Conservation: Lessons from New Riphyim',
-      excerpt: 'How local communities are leading environmental restoration efforts in rural Nagaland...',
+      title: 'JICA NFMP & World Bank ELEMENT Projects Update',
+      excerpt: 'Progress report on our ongoing partnerships with JICA and World Bank for sustainable forest management...',
       date: '2025-01-10',
       image: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg'
     },
     {
-      title: 'Education for Conservation: Reaching 50+ Schools',
-      excerpt: 'Our education programs continue to inspire young minds about wildlife conservation...',
+      title: 'Animal Action Education: Reaching 40+ Schools',
+      excerpt: 'Our AAE program sponsored by IFAW and WTI continues to educate young minds about elephant conservation...',
       date: '2025-01-05',
       image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg'
     }
@@ -81,7 +81,7 @@ const Home = () => {
             <span className="block text-emerald-400">Empowering Communities.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            13+ years of wildlife conservation and community-led action across Northeast India's biodiversity hotspot.
+            Founded in 2012 in Wokha, Nagaland. From Amur Falcon protection to community-based conservation across 40+ villages.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
