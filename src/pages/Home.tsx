@@ -69,7 +69,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg)'
+            backgroundImage: 'url(https://page.gensparksite.com/v1/base64_upload/4e2770f56408d0f03c21d6383169f561)'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
