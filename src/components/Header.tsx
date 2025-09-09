@@ -64,18 +64,20 @@ const Header = () => {
                     </button>
                     {isProgramsOpen && (
                       <div 
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                        className="absolute top-full left-0 pt-2 w-64 z-50"
                       >
-                        {item.submenu.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to={subItem.path}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200"
-                            onClick={() => setIsProgramsOpen(false)}
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
+                        <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                          {item.submenu.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subItem.path}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200"
+                              onClick={() => setIsProgramsOpen(false)}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
