@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
@@ -68,7 +69,18 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
+    alert('Thank you for your message! We will get back to you soon.');
     console.log('Form submitted:', formData);
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+      organization: '',
+      interest: ''
+    });
   };
 
   return (
@@ -296,12 +308,12 @@ const Contact = () => {
             Check our frequently asked questions or get in touch directly for more information.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/faq"
+            <Link
+              to="/faq"
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               View FAQ
-            </a>
+            </Link>
             <button className="border border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-8 py-3 rounded-lg font-semibold transition-colors duration-300">
               Schedule a Call
             </button>

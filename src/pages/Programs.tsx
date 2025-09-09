@@ -170,8 +170,9 @@ const Programs = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {wildlifeProjects.map((project, index) => {
               const IconComponent = project.icon;
+              const projectId = project.title.includes('Elephant') ? 'elephant-conflict' : '';
               return (
-                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
+                <div key={index} id={projectId} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
                   <div className="relative h-64 overflow-hidden">
                     <img 
                       src={project.image} 

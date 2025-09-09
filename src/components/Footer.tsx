@@ -23,16 +23,40 @@ const Footer = () => {
               wildlife conservation and community-led action since 2012.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a 
+                href="https://www.facebook.com/naturalnagas.org" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                aria-label="Follow us on Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a 
+                href="https://twitter.com/naturalnagas" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                aria-label="Follow us on Twitter"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a 
+                href="https://www.instagram.com/naturalnagas" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                aria-label="Follow us on Instagram"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a 
+                href="https://www.youtube.com/@naturalnagas" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                aria-label="Watch us on YouTube"
+              >
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -73,7 +97,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                <a href="mailto:info@naturalnagas.org" className="text-sm hover:text-emerald-400 transition-colors">
+                <a 
+                  href="mailto:info@naturalnagas.org?subject=Inquiry from Natural Nagas Website" 
+                  className="text-sm hover:text-emerald-400 transition-colors"
+                >
                   info@naturalnagas.org
                 </a>
               </div>
