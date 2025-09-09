@@ -270,13 +270,18 @@ const Contact = () => {
                 })}
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <MapPin className="w-12 h-12 mx-auto mb-4" />
-                  <div className="font-semibold">Interactive Map</div>
-                  <div className="text-sm">Wokha, Nagaland, India</div>
-                </div>
+              {/* Interactive Map */}
+              <div className="bg-gray-200 rounded-xl h-64 overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230520.60741370522!2d94.09279589338378!3d26.094156762693064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374828e78f070a8d%3A0x93d32284886e27ba!2sWokha%2C%20Nagaland%20797111!5e0!3m2!1sen!2sin!4v1725872745684!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Natural Nagas Location - Wokha, Nagaland"
+                />
               </div>
             </div>
           </div>
