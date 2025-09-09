@@ -50,12 +50,14 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.submenu ? (
-                  <div className="relative">
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setIsProgramsOpen(true)}
+                    onMouseLeave={() => setIsProgramsOpen(false)}
+                  >
                     <button
                       className="flex items-center space-x-1 text-gray-700 hover:text-emerald-600 transition-colors duration-200"
                       onClick={() => setIsProgramsOpen(!isProgramsOpen)}
-                      onMouseEnter={() => setIsProgramsOpen(true)}
-                      onMouseLeave={() => setIsProgramsOpen(false)}
                     >
                       <span>{item.label}</span>
                       <ChevronDown className="w-4 h-4" />
@@ -63,8 +65,6 @@ const Header = () => {
                     {isProgramsOpen && (
                       <div 
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
-                        onMouseEnter={() => setIsProgramsOpen(true)}
-                        onMouseLeave={() => setIsProgramsOpen(false)}
                       >
                         {item.submenu.map((subItem, subIndex) => (
                           <Link
