@@ -329,6 +329,95 @@ const Publications = () => {
         </div>
       </section>
 
+      {/* Mistnet Magazine */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Mistnet Magazine</h2>
+            <p className="text-xl text-gray-600">Our conservation magazine featuring stories, research, and community insights</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Magazine Cover/Visual */}
+                <div className="relative h-96 md:h-auto bg-gradient-to-br from-emerald-600 to-green-700 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-4xl font-bold text-white mb-4">Mistnet</h3>
+                    <p className="text-emerald-200 text-lg">Conservation Magazine</p>
+                    <div className="mt-6 text-white/80">
+                      <div className="flex items-center justify-center gap-2 text-sm">
+                        <Calendar className="w-4 h-4" />
+                        <span>Latest Edition Available</span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full"></div>
+                  <div className="absolute bottom-4 left-4 w-12 h-12 border-2 border-white/20 rounded-full"></div>
+                  <div className="absolute top-1/2 left-4 w-8 h-8 border-2 border-white/20 rounded-full transform -translate-y-1/2"></div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      <Newspaper className="w-4 h-4" />
+                      Digital Magazine
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                      Explore Nature Through Stories
+                    </h4>
+                    <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                      Dive into our digital magazine featuring conservation success stories, wildlife research, 
+                      community initiatives, and insights from the field. Experience interactive content with 
+                      our flipbook format.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span>Interactive flipbook experience</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span>Conservation stories & research</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span>Community spotlight features</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <a
+                      href="https://www.flipbookpdf.net/web/site/87e9d1c705310edbc786a332bf0293ab44b1d767202509.pdf.html#page/1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
+                    >
+                      <BookOpen className="w-6 h-6 group-hover:rotate-6 transition-transform duration-300" />
+                      <span>Read Mistnet Magazine</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </a>
+                    
+                    <div className="text-center">
+                      <p className="text-sm text-gray-600">
+                        Opens in interactive flipbook format • Best viewed on desktop
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup */}
       <section className="py-16 bg-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
