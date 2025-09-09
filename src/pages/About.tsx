@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Award, Users, Heart, MapPin, Target } from 'lucide-react';
+import { Calendar, Award, Users, Heart, MapPin, Target, Trees } from 'lucide-react';
 
 const About = () => {
   const milestones = [

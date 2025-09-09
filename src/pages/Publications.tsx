@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Download, BookOpen, Calendar, Eye, ArrowRight, FileText, Video, Newspaper } from 'lucide-react';
+import { Download, BookOpen, Calendar, Eye, ArrowRight, FileText, Video, Newspaper, Clock } from 'lucide-react';
 
 const Publications = () => {
   const annualReports = [

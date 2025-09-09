@@ -53,6 +53,7 @@ const Header = () => {
                   <div className="relative">
                     <button
                       className="flex items-center space-x-1 text-gray-700 hover:text-emerald-600 transition-colors duration-200"
+                      onClick={() => setIsProgramsOpen(!isProgramsOpen)}
                       onMouseEnter={() => setIsProgramsOpen(true)}
                       onMouseLeave={() => setIsProgramsOpen(false)}
                     >
@@ -61,7 +62,7 @@ const Header = () => {
                     </button>
                     {isProgramsOpen && (
                       <div 
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-10"
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
                         onMouseEnter={() => setIsProgramsOpen(true)}
                         onMouseLeave={() => setIsProgramsOpen(false)}
                       >
@@ -70,6 +71,7 @@ const Header = () => {
                             key={subIndex}
                             to={subItem.path}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200"
+                            onClick={() => setIsProgramsOpen(false)}
                           >
                             {subItem.label}
                           </Link>
