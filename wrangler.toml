@@ -1,0 +1,22 @@
+[env.production]
+name = "natural-nagas"
+compatibility_date = "2024-09-09"
+
+[env.production.vars]
+# Add any environment variables here if needed
+
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+# Pages configuration
+[[env.production.routes]]
+pattern = "*"
+zone_name = ""
+
+# Static asset configuration
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
