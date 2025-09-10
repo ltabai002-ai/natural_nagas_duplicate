@@ -46,6 +46,25 @@ const About = () => {
     {
       name: 'Steve Odyuo',
       role: 'Founder & Chairman',
+      education: 'Graduate, social activist and entrepreneur',
+      passion: 'Deep passion for wildlife and travel photography, outdoor and wildlife enthusiast',
+      positions: [
+        'Member of State Wildlife Advisory Board Nagaland',
+        'Member Standing Committee on Environment, BAN'
+      ],
+      inspiration: {
+        location: 'Kaziranga National Park, Assam (2011)',
+        moment: 'A shot of a serpent eagle flying off with a snake',
+        impact: 'Led to passion for wildlife photography and eventual founding of Natural Nagas'
+      },
+      keyAchievements: [
+        'Amur Falcon Conservation - from 100,000+ killed to zero in protected areas',
+        'Human-Elephant Conflict mitigation through RAP programs',
+        'Rescue and rediscovery of the Black Soft Shell Turtle',
+        'Green Dream Project - model village initiatives',
+        'Creative and innovative awareness strategies'
+      ],
+      vision: 'To create a generation of responsible citizens who can safeguard and take care of our environment in a sustainable way.',
       bio: 'Graduate, social activist and entrepreneur with a deep passion for wildlife and travel photography. Steve founded Natural Nagas in 2012 after a transformative wildlife photography experience at Kaziranga National Park in 2011. Member of State Wildlife Advisory Board Nagaland and Member Standing Committee on Environment, BAN. His work spans Amur Falcon conservation, Human-Elephant Conflict mitigation, and the rediscovery of the Black Soft Shell Turtle.',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg'
     }
@@ -137,26 +156,93 @@ const About = () => {
             <p className="text-xl text-gray-600">Guided by vision, driven by passion for conservation</p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-1/3">
+              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div className="lg:flex">
+                  {/* Profile Image & Basic Info */}
+                  <div className="lg:w-1/3 relative">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-full h-64 md:h-full object-cover"
+                      className="w-full h-80 lg:h-full object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6 lg:hidden">
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
+                        <div className="text-emerald-200 font-semibold">{member.role}</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="md:w-2/3 p-8 md:p-12">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <div className="text-emerald-600 font-semibold mb-6">{member.role}</div>
-                    <p className="text-gray-700 leading-relaxed text-lg">{member.bio}</p>
+                  
+                  {/* Detailed Information */}
+                  <div className="lg:w-2/3 p-8 lg:p-12">
+                    <div className="hidden lg:block mb-6">
+                      <h3 className="text-3xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                      <div className="text-emerald-600 font-semibold text-xl">{member.role}</div>
+                    </div>
                     
-                    <div className="mt-8 pt-6 border-t border-gray-200">
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Award className="w-5 h-5" />
-                        <span>13+ Years Conservation Leadership</span>
+                    {/* Background & Education */}
+                    <div className="mb-8">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-emerald-600" />
+                        Background & Experience
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed mb-4">{member.education}</p>
+                      <p className="text-gray-700 leading-relaxed">{member.passion}</p>
+                      
+                      <div className="mt-4 space-y-2">
+                        {member.positions.map((position, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-emerald-700">
+                            <Award className="w-4 h-4" />
+                            <span className="text-sm font-medium">{position}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Inspiration Story */}
+                    <div className="mb-8 bg-emerald-50 rounded-lg p-6">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <MapPin className="w-5 h-5 text-emerald-600" />
+                        The Inspiration Moment
+                      </h4>
+                      <div className="space-y-2 text-sm">
+                        <div><strong className="text-gray-900">Location:</strong> <span className="text-gray-700">{member.inspiration.location}</span></div>
+                        <div><strong className="text-gray-900">Moment:</strong> <span className="text-gray-700">{member.inspiration.moment}</span></div>
+                        <div><strong className="text-gray-900">Impact:</strong> <span className="text-gray-700">{member.inspiration.impact}</span></div>
+                      </div>
+                    </div>
+                    
+                    {/* Key Achievements */}
+                    <div className="mb-8">
+                      <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <Award className="w-5 h-5 text-emerald-600" />
+                        Key Conservation Achievements
+                      </h4>
+                      <div className="grid gap-3">
+                        {member.keyAchievements.map((achievement, idx) => (
+                          <div key={idx} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors duration-200">
+                            <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-gray-700 text-sm">{achievement}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Vision */}
+                    <div className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-lg p-6 text-white">
+                      <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
+                        <Target className="w-5 h-5" />
+                        Vision for Natural Nagas
+                      </h4>
+                      <p className="leading-relaxed italic">"{member.vision}"</p>
+                      
+                      <div className="mt-4 pt-4 border-t border-white/20">
+                        <div className="flex items-center gap-2 text-emerald-100">
+                          <Calendar className="w-4 h-4" />
+                          <span className="text-sm">13+ Years Conservation Leadership</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -165,19 +251,33 @@ const About = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <div className="bg-emerald-50 rounded-lg p-6 max-w-2xl mx-auto">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Growing Team</h3>
-              <p className="text-gray-700">
+          <div className="text-center mt-16">
+            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Users className="w-8 h-8 text-emerald-600" />
+                <h3 className="text-2xl font-bold text-gray-900">Growing Conservation Team</h3>
+              </div>
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                 We're continuously expanding our team of dedicated conservationists, researchers, 
-                and community organizers. Join us in making a difference.
+                field workers, and community organizers. Join Steve's mission to create a generation 
+                of responsible citizens safeguarding our environment.
               </p>
-              <Link
-                to="/get-involved#volunteer"
-                className="inline-block mt-4 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Join Our Team
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/get-involved#volunteer"
+                  className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                >
+                  <Heart className="w-5 h-5" />
+                  Join Our Mission
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 border border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+                >
+                  <MapPin className="w-5 h-5" />
+                  Contact Leadership
+                </Link>
+              </div>
             </div>
           </div>
         </div>
