@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Leaf, ChevronDown } from 'lucide-react';
+import { Menu, X, Leaf } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -12,16 +12,8 @@ const Header = () => {
   const menuItems = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
-    { 
-      label: 'Programs', 
-      submenu: [
-        { path: '/programs', label: 'All Programs' },
-        { path: '/programs#amur-falcon', label: 'Amur Falcon Conservation' },
-        { path: '/programs#green-dream', label: 'Green Dream Project' },
-        { path: '/programs#elephant-conflict', label: 'Human-Elephant Conflict' },
-      ]
-    },
-    { path: '/education', label: 'Education' },
+    { path: '/programs', label: 'Programs' },
+
     { path: '/events', label: 'Events' },
     { path: '/publications', label: 'Publications' },
     { path: '/impact', label: 'Impact' },
@@ -50,50 +42,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
-                {item.submenu ? (
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setIsProgramsOpen(true)}
-                    onMouseLeave={() => setIsProgramsOpen(false)}
-                  >
-                    <button
-                      className="flex items-center space-x-1 text-gray-700 hover:text-emerald-600 transition-colors duration-200"
-                      onClick={() => setIsProgramsOpen(!isProgramsOpen)}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                    {isProgramsOpen && (
-                      <div 
-                        className="absolute top-full left-0 pt-2 w-64 z-50"
-                      >
-                        <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
-                          {item.submenu.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              to={subItem.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200"
-                              onClick={() => setIsProgramsOpen(false)}
-                            >
-                              {subItem.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${
-                      isActive(item.path) ? 'text-emerald-600 font-medium' : ''
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={index}
+                to={item.path}
+                className={`text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${
+                  isActive(item.path) ? 'text-emerald-600 font-medium' : ''
+                }`}
+              >
+                {item.label}
+              </Link>
             ))}
             
             {/* Donate Button */}
@@ -120,35 +77,16 @@ const Header = () => {
           <div className="lg:hidden border-t border-gray-100 py-4">
             <nav className="space-y-4">
               {menuItems.map((item, index) => (
-                <div key={index}>
-                  {item.submenu ? (
-                    <div>
-                      <span className="block text-gray-700 font-medium mb-2">{item.label}</span>
-                      <div className="pl-4 space-y-2">
-                        {item.submenu.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to={subItem.path}
-                            className="block text-gray-600 hover:text-emerald-600 transition-colors duration-200"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`block text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${
-                        isActive(item.path) ? 'text-emerald-600 font-medium' : ''
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={`block text-gray-700 hover:text-emerald-600 transition-colors duration-200 ${
+                    isActive(item.path) ? 'text-emerald-600 font-medium' : ''
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
               ))}
               <Link
                 to="/get-involved"
