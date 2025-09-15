@@ -129,7 +129,7 @@ const Publications = () => {
       duration: 'Podcast',
       year: '2018',
       description: 'Rediscovery Podcast featuring Steve Odyuo discussing conservation initiatives and community-based environmental work in Nagaland.',
-      thumbnail: 'https://images.pexels.com/photos/7428096/pexels-photo-7428096.jpeg',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1Qn-83ssNI0YtwLJ3r0YynTg0f2mPUY4e&sz=w1000',
       url: 'https://rediscoveryproject.com/2018/03/22/rediscovery-podcast-steve-odoyo-nagaland/?fbclid=IwY2xjawMLq-RleHRuA2FlbQIxMQABHpdEAYOOjLRmjSknUEwZCpwBpHJKHor6RoNyflEWkMrbmQzPwIsnK1VD5yuc_aem_Zdm0ApXbloPSUJYRItfmhw',
       type: 'external'
     }
