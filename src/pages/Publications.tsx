@@ -287,7 +287,7 @@ const Publications = () => {
             <p className="text-xl text-gray-600">Conservation insights and stories from the field</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
@@ -296,39 +296,24 @@ const Publications = () => {
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="text-sm font-medium bg-emerald-600 px-3 py-1 rounded-full">
                       {post.category}
                     </div>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
                     {post.title}
                   </h3>
-                  <p className="text-gray-700 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
                   <Link
                     to="#"
-                    className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300"
                   >
-                    Read Full Article <ArrowRight className="w-4 h-4" />
+                    Read Article <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </article>
