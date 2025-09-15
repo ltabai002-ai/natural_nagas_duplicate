@@ -102,20 +102,6 @@ const Publications = () => {
 
   const documentaries = [
     {
-      title: 'Wings of Hope: The Amur Falcon Story',
-      duration: '45 minutes',
-      year: '2024',
-      description: 'A comprehensive documentary following the Amur Falcon migration and conservation efforts in Nagaland.',
-      thumbnail: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg'
-    },
-    {
-      title: 'Green Dreams: Village Transformation',
-      duration: '30 minutes',
-      year: '2023',
-      description: 'Chronicles the journey of New Riphyim village as it transforms through sustainable development practices.',
-      thumbnail: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg'
-    },
-    {
       title: 'Radio Featuring Steve Odyuo: AKASHVANI MOKOKCHUNG',
       duration: 'Radio Interview',
       year: '2024',
@@ -159,24 +145,26 @@ const Publications = () => {
             <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
               <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-0">
                 {/* Magazine Cover/Visual */}
-                <div className="relative h-64 sm:h-80 lg:h-auto bg-gradient-to-br from-emerald-600 to-green-700 flex items-center justify-center order-1 lg:order-none">
-                  <div className="text-center p-4 sm:p-6 lg:p-8">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                      <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                <div className="relative h-64 sm:h-80 lg:h-auto overflow-hidden order-1 lg:order-none">
+                  <img 
+                    src="https://drive.google.com/thumbnail?id=1PwRPqlLq1zcML0r4Cx3dQ9OhN-5fcQJH&sz=w1000"
+                    alt="Mistnet Magazine Cover"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">Mistnet</h3>
-                    <p className="text-emerald-200 text-base sm:text-lg">Conservation Magazine</p>
-                    <div className="mt-4 sm:mt-6 text-white/80">
-                      <div className="flex items-center justify-center gap-2 text-xs sm:text-sm">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">Mistnet</h3>
+                    <p className="text-emerald-200 text-sm sm:text-base">Conservation Magazine</p>
+                    <div className="mt-2 sm:mt-3 text-white/80">
+                      <div className="flex items-center gap-2 text-xs sm:text-sm">
                         <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span>Latest Edition Available</span>
                       </div>
                     </div>
                   </div>
-                  {/* Decorative Elements - Hidden on mobile, visible on larger screens */}
-                  <div className="hidden sm:block absolute top-4 right-4 w-12 h-12 lg:w-16 lg:h-16 border-2 border-white/20 rounded-full"></div>
-                  <div className="hidden sm:block absolute bottom-4 left-4 w-8 h-8 lg:w-12 lg:h-12 border-2 border-white/20 rounded-full"></div>
-                  <div className="hidden lg:block absolute top-1/2 left-4 w-8 h-8 border-2 border-white/20 rounded-full transform -translate-y-1/2"></div>
                 </div>
                 
                 {/* Content */}
