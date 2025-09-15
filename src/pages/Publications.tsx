@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Download, BookOpen, Calendar, Eye, ArrowRight, FileText, Video, Newspaper, Clock } from 'lucide-react';
+import { Download, BookOpen, Calendar, Eye, ArrowRight, FileText, Video, Newspaper, Clock, Youtube } from 'lucide-react';
 
 const Publications = () => {
   const annualReports = [
@@ -120,7 +120,7 @@ const Publications = () => {
       duration: 'Radio Interview',
       year: '2024',
       description: 'Radio interview with Steve Odyuo discussing Natural Nagas conservation efforts and community engagement.',
-      thumbnail: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg',
+      thumbnail: 'https://drive.google.com/thumbnail?id=14qnbF1NrNoTRwbh9rQ9fPnGqwbljVSd7&sz=w1000',
       url: 'https://youtu.be/g707YTMXa3Y?si=vQqZQKBgYkLCe4xf',
       type: 'youtube'
     },
@@ -358,7 +358,11 @@ const Publications = () => {
                         rel="noopener noreferrer"
                         className="bg-white text-emerald-600 rounded-full p-4 shadow-lg transform scale-110 hover:bg-emerald-50 transition-colors duration-300"
                       >
-                        <Video className="w-8 h-8" />
+                        {doc.title === 'Radio Featuring Steve Odyuo: AKASHVANI MOKOKCHUNG' ? (
+                          <Youtube className="w-8 h-8" />
+                        ) : (
+                          <Video className="w-8 h-8" />
+                        )}
                       </a>
                     ) : (
                       <button className="bg-white text-emerald-600 rounded-full p-4 shadow-lg transform scale-110">
