@@ -330,7 +330,7 @@ const Publications = () => {
             <p className="text-xl text-gray-600">Visual stories of our conservation journey</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {documentaries.map((doc, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
@@ -339,6 +339,17 @@ const Publications = () => {
                     alt={doc.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="text-sm font-medium bg-emerald-600 px-3 py-1 rounded-full">
+                      {doc.year}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 right-4 text-white">
+                    <div className="text-sm font-medium bg-black/70 px-3 py-1 rounded-full">
+                      {doc.duration}
+                    </div>
+                  </div>
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {doc.url ? (
                       <a 
@@ -355,30 +366,24 @@ const Publications = () => {
                       </button>
                     )}
                   </div>
-                  <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                    {doc.duration}
-                  </div>
                 </div>
                 
                 <div className="p-6">
-                  <div className="text-emerald-600 text-sm font-medium mb-2">{doc.year}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{doc.title}</h3>
-                  <p className="text-gray-700 mb-4">{doc.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">{doc.title}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{doc.description}</p>
                   
                   {doc.url ? (
                     <a 
                       href={doc.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300"
+                      className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300"
                     >
-                      <Video className="w-4 h-4" />
-                      {doc.type === 'youtube' ? 'Watch on YouTube' : doc.type === 'external' ? 'Listen to Podcast' : 'Watch Documentary'}
+                      {doc.type === 'youtube' ? 'Watch Video' : doc.type === 'external' ? 'Listen Podcast' : 'Watch Documentary'} <ArrowRight className="w-4 h-4" />
                     </a>
                   ) : (
-                    <button className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300">
-                      <Video className="w-4 h-4" />
-                      Watch Documentary
+                    <button className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300">
+                      Watch Documentary <ArrowRight className="w-4 h-4" />
                     </button>
                   )}
                 </div>
