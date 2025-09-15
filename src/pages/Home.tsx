@@ -346,7 +346,7 @@ const Home = () => {
           
           <div className="text-center mt-12">
             <Link
-              to="/publications"
+              to="/events"
               className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
             >
               View All Stories <ArrowRight className="w-5 h-5" />
