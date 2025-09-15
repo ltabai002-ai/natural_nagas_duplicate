@@ -24,6 +24,8 @@ const GetInvolved = () => {
     { amount: 5000, impact: 'Sponsors Amur Falcon monitoring for one week' },
   ];
 
+  // VOLUNTEER OPPORTUNITIES DATA - COMMENTED OUT FOR LATER USE
+  /*
   const volunteerOpportunities = [
     {
       title: 'Field Research Assistant',
@@ -58,6 +60,7 @@ const GetInvolved = () => {
       icon: Globe
     }
   ];
+  */
 
   const partnershipTiers = [
     {
@@ -268,7 +271,8 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Volunteer Section */}
+      {/* Volunteer Section - COMMENTED OUT FOR LATER USE */}
+      {/*
       <section id="volunteer" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -323,6 +327,7 @@ const GetInvolved = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Partnership Section */}
       <section id="partnership" className="py-20 bg-gray-50">

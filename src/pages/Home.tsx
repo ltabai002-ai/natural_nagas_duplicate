@@ -14,31 +14,47 @@ const Home = () => {
     {
       title: 'Amur Falcon Conservation',
       description: 'Our flagship program that made Nagaland the "Falcon Capital of the World" - protecting these raptors on their 22,000 km migration from Siberia to Africa via Doyang reservoir.',
-      image: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg',
+      image: 'https://drive.google.com/thumbnail?id=1XzdjI2tutWLSR-nPMQE-BTRvkf167H1s&sz=w1000',
       link: '/programs#amur-falcon',
       stats: 'From 100,000+ Killed to Zero in 2013'
     },
     {
       title: 'Green Dream Project',
       description: 'Model village initiative in New Riphyim with the motto "Of the community, by the community and for the community" - sustainable development and biodiversity conservation.',
-      image: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg',
+      image: 'https://drive.google.com/thumbnail?id=1x5lwtJTIv_RkllSsDR4nOatpyiCBF9ZN&sz=w1000',
       link: '/programs#green-dream',
       stats: 'Model Village Program'
     },
     {
       title: 'Black Soft-Shell Turtle Conservation',
       description: 'Rediscovery and conservation of the Black Soft-Shell Turtle (listed as Extinct in Wild in 2002) at Wozhu Tsophow wetlands, Old Akuk village.',
-      image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg',
-      link: '/programs#turtle-conservation',
+      image: 'https://drive.google.com/thumbnail?id=1N7Q0yFP7aYWye6n9fYJn_35IWNzSNb3Q&sz=w1000',
+      link: '/programs#black-turtle',
       stats: 'Species Back from Extinction'
     }
   ];
 
   const partners = [
-    { name: 'Wildlife Trust of India', logo: 'WTI' },
-    { name: 'JICA', logo: 'JICA' },
-    { name: 'World Bank', logo: 'WB' },
-    { name: 'Government of Nagaland', logo: 'GON' }
+    { 
+      name: 'Wildlife Trust of India', 
+      logo: 'https://drive.google.com/thumbnail?id=1rU9_pzO-wf7jS3KnSy8Pr6kcUiWgL1cW&sz=w400',
+      isImage: true
+    },
+    { 
+      name: 'JICA', 
+      logo: 'https://drive.google.com/thumbnail?id=1pR3majUzNMMoarHM-pjKXDngtEgmZdOb&sz=w400',
+      isImage: true
+    },
+    { 
+      name: 'World Bank', 
+      logo: 'https://drive.google.com/thumbnail?id=1em3bbUAf-Ot85CXJP6Mrq0-D_GwqODCk&sz=w400',
+      isImage: true
+    },
+    { 
+      name: 'Government of Nagaland', 
+      logo: 'https://drive.google.com/thumbnail?id=1nAwTN-p0PtkTZ7Ob9TxkvqwVMgrqKw75&sz=w400',
+      isImage: true
+    }
   ];
 
   const blogPosts = [
@@ -46,19 +62,22 @@ const Home = () => {
       title: 'World Environment Day 2025: Ending Plastic Pollution at Longphijü',
       excerpt: 'Natural Nagas team carried out meaningful awareness and action campaign at Longphijü wetlands in Wokha district...',
       date: '2025-06-05',
-      image: 'https://images.pexels.com/photos/3646176/pexels-photo-3646176.jpeg'
+      image: 'https://drive.google.com/thumbnail?id=17ED7XbDedZMMgn_QIMHewgEjozRrlgr1&sz=w1000',
+      link: '/events#world-environment-day'
     },
     {
-      title: 'JICA NFMP & World Bank ELEMENT Projects Update',
+      title: 'ELEMENT World Bank Project',
       excerpt: 'Progress report on our ongoing partnerships with JICA and World Bank for sustainable forest management...',
       date: '2025-01-10',
-      image: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg'
+      image: 'https://drive.google.com/thumbnail?id=1b1c8gMwZaW2XdYiPIW3Y2acnHV-3sDSr&sz=w1000',
+      link: '/programs#element'
     },
     {
       title: 'Animal Action Education: Reaching 40+ Schools',
       excerpt: 'Our AAE program sponsored by IFAW and WTI continues to educate young minds about elephant conservation...',
       date: '2025-01-05',
-      image: 'https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg'
+      image: 'https://drive.google.com/thumbnail?id=1t6dIw-lqDWQrLJsufuvz-AjJGNdMB9HQ&sz=w1000',
+      link: '/events#aae-drawings'
     }
   ];
 
@@ -69,7 +88,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://page.gensparksite.com/v1/base64_upload/4e2770f56408d0f03c21d6383169f561)'
+            backgroundImage: 'url(https://drive.google.com/thumbnail?id=1vDma-gy0gBidu1SSZt7YY6CkAchL-6bX&sz=w1920)'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
@@ -265,9 +284,19 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {partners.map((partner, index) => (
               <div key={index} className="flex items-center justify-center">
-                <div className="w-32 h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 font-bold text-lg hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-300">
-                  {partner.logo}
-                </div>
+                {partner.isImage ? (
+                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center p-2 hover:bg-emerald-50 transition-colors duration-300 shadow-sm hover:shadow-md">
+                    <img 
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain filter hover:brightness-110 transition-all duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-32 h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 font-bold text-lg hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-300">
+                    {partner.logo}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -305,7 +334,7 @@ const Home = () => {
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                   <Link
-                    to="/publications"
+                    to={post.link || '/publications'}
                     className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300"
                   >
                     Read More <ArrowRight className="w-4 h-4" />

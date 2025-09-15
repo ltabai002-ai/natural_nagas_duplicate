@@ -6,7 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Programs from './pages/Programs';
-import Education from './pages/Education';
+
 import Events from './pages/Events';
 import Publications from './pages/Publications';
 import Impact from './pages/Impact';
@@ -29,7 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<Programs />} />
-            <Route path="/education" element={<Education />} />
+
             <Route path="/events" element={<Events />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/impact" element={<Impact />} />

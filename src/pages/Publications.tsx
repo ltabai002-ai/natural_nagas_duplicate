@@ -114,6 +114,24 @@ const Publications = () => {
       year: '2023',
       description: 'Chronicles the journey of New Riphyim village as it transforms through sustainable development practices.',
       thumbnail: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg'
+    },
+    {
+      title: 'Radio Featuring Steve Odyuo: AKASHVANI MOKOKCHUNG',
+      duration: 'Radio Interview',
+      year: '2024',
+      description: 'Radio interview with Steve Odyuo discussing Natural Nagas conservation efforts and community engagement.',
+      thumbnail: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg',
+      url: 'https://youtu.be/g707YTMXa3Y?si=vQqZQKBgYkLCe4xf',
+      type: 'youtube'
+    },
+    {
+      title: 'Podcast Featuring Steve Odyuo',
+      duration: 'Podcast',
+      year: '2018',
+      description: 'Rediscovery Podcast featuring Steve Odyuo discussing conservation initiatives and community-based environmental work in Nagaland.',
+      thumbnail: 'https://images.pexels.com/photos/7428096/pexels-photo-7428096.jpeg',
+      url: 'https://rediscoveryproject.com/2018/03/22/rediscovery-podcast-steve-odoyo-nagaland/?fbclid=IwY2xjawMLq-RleHRuA2FlbQIxMQABHpdEAYOOjLRmjSknUEwZCpwBpHJKHor6RoNyflEWkMrbmQzPwIsnK1VD5yuc_aem_Zdm0ApXbloPSUJYRItfmhw',
+      type: 'external'
     }
   ];
 
@@ -129,46 +147,91 @@ const Publications = () => {
         </div>
       </section>
 
-      {/* Annual Reports */}
-      <section className="py-20">
+      {/* Mistnet Magazine */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Annual Reports</h2>
-            <p className="text-xl text-gray-600">Transparent documentation of our conservation impact and operations</p>
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Mistnet Magazine</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4">Our conservation magazine featuring stories, research, and community insights</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {annualReports.map((report, index) => (
-              <div key={index} className={`bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 ${report.featured ? 'ring-2 ring-emerald-200' : ''}`}>
-                {report.featured && (
-                  <div className="bg-emerald-600 text-white text-center py-2 text-sm font-bold">
-                    Latest Report
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+              <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-0">
+                {/* Magazine Cover/Visual */}
+                <div className="relative h-64 sm:h-80 lg:h-auto bg-gradient-to-br from-emerald-600 to-green-700 flex items-center justify-center order-1 lg:order-none">
+                  <div className="text-center p-4 sm:p-6 lg:p-8">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    </div>
+                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">Mistnet</h3>
+                    <p className="text-emerald-200 text-base sm:text-lg">Conservation Magazine</p>
+                    <div className="mt-4 sm:mt-6 text-white/80">
+                      <div className="flex items-center justify-center gap-2 text-xs sm:text-sm">
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span>Latest Edition Available</span>
+                      </div>
+                    </div>
                   </div>
-                )}
-                <div className="p-6">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors duration-300">
-                    <FileText className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
+                  {/* Decorative Elements - Hidden on mobile, visible on larger screens */}
+                  <div className="hidden sm:block absolute top-4 right-4 w-12 h-12 lg:w-16 lg:h-16 border-2 border-white/20 rounded-full"></div>
+                  <div className="hidden sm:block absolute bottom-4 left-4 w-8 h-8 lg:w-12 lg:h-12 border-2 border-white/20 rounded-full"></div>
+                  <div className="hidden lg:block absolute top-1/2 left-4 w-8 h-8 border-2 border-white/20 rounded-full transform -translate-y-1/2"></div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-none">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      <Newspaper className="w-4 h-4" />
+                      Digital Magazine
+                    </div>
+                    <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                      Explore Nature Through Stories
+                    </h4>
+                    <p className="text-gray-700 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
+                      Dive into our digital magazine featuring conservation success stories, wildlife research, 
+                      community initiatives, and insights from the field. Experience interactive content with 
+                      our flipbook format.
+                    </p>
                   </div>
                   
-                  <div className="text-emerald-600 font-bold text-2xl mb-2">{report.year}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{report.title}</h3>
-                  <p className="text-gray-700 mb-4">{report.description}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
-                    <span>{report.pages} pages</span>
-                    <span>PDF Format</span>
+                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
+                      <span>Interactive flipbook experience</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
+                      <span>Conservation stories & research</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
+                      <span>Community spotlight features</span>
+                    </div>
                   </div>
                   
-                  <a
-                    href={report.downloadUrl}
-                    className="inline-flex items-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors duration-300"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download Report
-                  </a>
+                  <div className="space-y-4">
+                    <a
+                      href="https://www.flipbookpdf.net/web/site/87e9d1c705310edbc786a332bf0293ab44b1d767202509.pdf.html#page/1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 sm:gap-3 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
+                    >
+                      <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-6 transition-transform duration-300 flex-shrink-0" />
+                      <span className="truncate">Read Mistnet Magazine</span>
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
+                    </a>
+                    
+                    <div className="text-center">
+                      <p className="text-xs sm:text-sm text-gray-600 px-2">
+                        Opens in interactive flipbook format • Best viewed on desktop
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -304,9 +367,20 @@ const Publications = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="bg-white text-emerald-600 rounded-full p-4 shadow-lg transform scale-110">
-                      <Video className="w-8 h-8" />
-                    </button>
+                    {doc.url ? (
+                      <a 
+                        href={doc.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-emerald-600 rounded-full p-4 shadow-lg transform scale-110 hover:bg-emerald-50 transition-colors duration-300"
+                      >
+                        <Video className="w-8 h-8" />
+                      </a>
+                    ) : (
+                      <button className="bg-white text-emerald-600 rounded-full p-4 shadow-lg transform scale-110">
+                        <Video className="w-8 h-8" />
+                      </button>
+                    )}
                   </div>
                   <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                     {doc.duration}
@@ -318,10 +392,22 @@ const Publications = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{doc.title}</h3>
                   <p className="text-gray-700 mb-4">{doc.description}</p>
                   
-                  <button className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300">
-                    <Video className="w-4 h-4" />
-                    Watch Documentary
-                  </button>
+                  {doc.url ? (
+                    <a 
+                      href={doc.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300"
+                    >
+                      <Video className="w-4 h-4" />
+                      {doc.type === 'youtube' ? 'Watch on YouTube' : doc.type === 'external' ? 'Listen to Podcast' : 'Watch Documentary'}
+                    </a>
+                  ) : (
+                    <button className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300">
+                      <Video className="w-4 h-4" />
+                      Watch Documentary
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -329,91 +415,46 @@ const Publications = () => {
         </div>
       </section>
 
-      {/* Mistnet Magazine */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      {/* Annual Reports */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Mistnet Magazine</h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">Our conservation magazine featuring stories, research, and community insights</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Annual Reports</h2>
+            <p className="text-xl text-gray-600">Transparent documentation of our conservation impact and operations</p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
-              <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-0">
-                {/* Magazine Cover/Visual */}
-                <div className="relative h-64 sm:h-80 lg:h-auto bg-gradient-to-br from-emerald-600 to-green-700 flex items-center justify-center order-1 lg:order-none">
-                  <div className="text-center p-4 sm:p-6 lg:p-8">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                      <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                    </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">Mistnet</h3>
-                    <p className="text-emerald-200 text-base sm:text-lg">Conservation Magazine</p>
-                    <div className="mt-4 sm:mt-6 text-white/80">
-                      <div className="flex items-center justify-center gap-2 text-xs sm:text-sm">
-                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <span>Latest Edition Available</span>
-                      </div>
-                    </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {annualReports.map((report, index) => (
+              <div key={index} className={`bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500 ${report.featured ? 'ring-2 ring-emerald-200' : ''}`}>
+                {report.featured && (
+                  <div className="bg-emerald-600 text-white text-center py-2 text-sm font-bold">
+                    Latest Report
                   </div>
-                  {/* Decorative Elements - Hidden on mobile, visible on larger screens */}
-                  <div className="hidden sm:block absolute top-4 right-4 w-12 h-12 lg:w-16 lg:h-16 border-2 border-white/20 rounded-full"></div>
-                  <div className="hidden sm:block absolute bottom-4 left-4 w-8 h-8 lg:w-12 lg:h-12 border-2 border-white/20 rounded-full"></div>
-                  <div className="hidden lg:block absolute top-1/2 left-4 w-8 h-8 border-2 border-white/20 rounded-full transform -translate-y-1/2"></div>
-                </div>
-                
-                {/* Content */}
-                <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-none">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                      <Newspaper className="w-4 h-4" />
-                      Digital Magazine
-                    </div>
-                    <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-                      Explore Nature Through Stories
-                    </h4>
-                    <p className="text-gray-700 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-                      Dive into our digital magazine featuring conservation success stories, wildlife research, 
-                      community initiatives, and insights from the field. Experience interactive content with 
-                      our flipbook format.
-                    </p>
+                )}
+                <div className="p-6">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors duration-300">
+                    <FileText className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   
-                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
-                      <span>Interactive flipbook experience</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
-                      <span>Conservation stories & research</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
-                      <span>Community spotlight features</span>
-                    </div>
+                  <div className="text-emerald-600 font-bold text-2xl mb-2">{report.year}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{report.title}</h3>
+                  <p className="text-gray-700 mb-4">{report.description}</p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
+                    <span>{report.pages} pages</span>
+                    <span>PDF Format</span>
                   </div>
                   
-                  <div className="space-y-4">
-                    <a
-                      href="https://www.flipbookpdf.net/web/site/87e9d1c705310edbc786a332bf0293ab44b1d767202509.pdf.html#page/1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 sm:gap-3 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
-                    >
-                      <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-6 transition-transform duration-300 flex-shrink-0" />
-                      <span className="truncate">Read Mistnet Magazine</span>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
-                    </a>
-                    
-                    <div className="text-center">
-                      <p className="text-xs sm:text-sm text-gray-600 px-2">
-                        Opens in interactive flipbook format • Best viewed on desktop
-                      </p>
-                    </div>
-                  </div>
+                  <a
+                    href={report.downloadUrl}
+                    className="inline-flex items-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors duration-300"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Report
+                  </a>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
