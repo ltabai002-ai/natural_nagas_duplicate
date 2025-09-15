@@ -244,45 +244,33 @@ const Publications = () => {
             <p className="text-xl text-gray-600">Our conservation work featured in leading publications</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {mediaCoverage.map((article, index) => (
               <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img 
                     src={article.image}
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-white/90 backdrop-blur-sm text-emerald-600 px-3 py-1 rounded-full text-sm font-medium">
-                      {article.type}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="text-sm font-medium bg-emerald-600 px-3 py-1 rounded-full">
+                      {article.publication}
                     </div>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <div className="text-emerald-600 font-semibold mb-2">{article.publication}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
                     {article.title}
                   </h3>
-                  
-                  <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
-                    <Calendar className="w-4 h-4" />
-                    <span>
-                      {new Date(article.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </span>
-                  </div>
-                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">Published by {article.publication}</p>
                   <a
                     href={article.url}
-                    className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-300"
                   >
-                    <Eye className="w-4 h-4" />
-                    Read Article
+                    Read Article <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
               </article>
