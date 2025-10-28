@@ -26,7 +26,6 @@ const Header = () => {
     { path: '/publications', label: 'Publications' },
     { path: '/impact', label: 'Impact' },
     { path: '/gallery', label: 'Gallery' },
-    { path: '/get-involved', label: 'Get Involved' },
     { path: '/contact', label: 'Contact' },
   ];
 
@@ -95,14 +94,6 @@ const Header = () => {
                 )}
               </div>
             ))}
-            
-            {/* Donate Button */}
-            <Link
-              to="/get-involved"
-              className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200 font-medium"
-            >
-              Donate Now
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -150,13 +141,6 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              <Link
-                to="/get-involved"
-                className="block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200 font-medium text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Donate Now
-              </Link>
             </nav>
           </div>
         )}

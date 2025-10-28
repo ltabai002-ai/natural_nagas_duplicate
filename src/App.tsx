@@ -11,7 +11,6 @@ import Events from './pages/Events';
 import Publications from './pages/Publications';
 import Impact from './pages/Impact';
 import Gallery from './pages/Gallery';
-import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Privacy from './pages/Privacy';
@@ -34,7 +33,6 @@ function App() {
             <Route path="/publications" element={<Publications />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/privacy" element={<Privacy />} />
