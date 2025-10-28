@@ -4,7 +4,6 @@ import { ArrowRight, Users, GraduationCap, Calendar, Heart, MapPin, Bird, Trees,
 
 const Home = () => {
   const impactStats = [
-    { number: '40+', label: 'Villages Engaged', icon: Users },
     { number: '25+', label: 'Species Protected', icon: Bird },
     { number: '50+', label: 'Schools Educated', icon: GraduationCap },
     { number: '13+', label: 'Years Active', icon: Calendar },
@@ -115,7 +114,7 @@ const Home = () => {
             <p className="text-xl text-emerald-200">Making a difference across Nagaland since 2012</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {impactStats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
